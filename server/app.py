@@ -217,8 +217,11 @@ def load_json_file_data_to_db() -> None:
     except Exception as e:
         print(e)
 
+# if __name__ == "__main__":
+#     Base.metadata.create_all(engine)
+#     load_json_file_data_to_db()
+#     app.run(host="0.0.0.0", port=8000,debug=True, auto_reload=True)
 
 if __name__ == "__main__":
-    Base.metadata.create_all(engine)
-    # load_json_file_data_to_db()
-    app.run(host="0.0.0.0", port=8000, dev=True)
+  Base.metadata.create_all(engine)
+  app.run(debug=True, access_log=True)

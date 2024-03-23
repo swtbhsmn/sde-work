@@ -4,4 +4,4 @@ up:
 pull-package:
 	pipenv run pip3 freeze > requirements.txt
 
-gunicorn -k uvicorn.workers.UvicornWorker --bind "0.0.0.0:8080" --log-level debug app:app
+#gunicorn -k uvicorn.workers.UvicornWorker --bind "0.0.0.0:8080" --log-level debug app:app
